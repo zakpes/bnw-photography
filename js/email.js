@@ -35,7 +35,7 @@ function sendRequest() {
 	var body = escape(document.getElementById("body").value);
 
 	try{
-    http.open('POST',  '/php/contactform.php');
+    http.open('POST',  '../php/contactform.php');
     http.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     http.onreadystatechange = handleResponse;
 		http.send('name='+name+'&email='+email+'&subject='+subject+'&body='+body+'&rnd='+rnd);
