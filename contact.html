@@ -90,13 +90,25 @@
 
                     <h1 class="contact-form-title">Contact us</h1>
 
-                    <form class="contact-form">
-                        <input id="name" class="form-control" type="text" name="name" value="" placeholder="Name">
-                        <input id="email" class="form-control" type="email" name="email" value="" placeholder="Email">
-                        <input placeholder="Subject" type="text" name="subject" id="subject" size="40" aria-invalid="false" />
-                        <textarea id="body" name="body" rows="4" style="width: 100%;" placeholder="Your message"></textarea>
-                        <button id="submit" class="btn btn-primary btn-lg btn-send pull-right" type="submit" name="button" onClick="return check_values();">SEND</button>
+                    <div id="contactWrapper" >
+                    <form id="contactform">
+                    <div class="column one-second">
+                    <input placeholder="Your name" type="text" name="name" id="name" size="40" aria-required="true" aria-invalid="false" />
+                    </div>
+                    <div class="column one-second">
+                    <input placeholder="Your e-mail" type="email" name="email" id="email" size="40" aria-required="true" aria-invalid="false" />
+                    </div>
+                    <div class="column one">
+                    <input placeholder="Subject" type="text" name="subject" id="subject" size="40" aria-invalid="false" />
+                    </div>
+                    <div class="column one">
+                    <textarea placeholder="Message" name="body" id="body" style="width:100%;" rows="10" aria-invalid="false"></textarea>
+                    </div>
+                    <div class="column one">
+                    <input type="button" value="Send A Message" id="submit" onClick="return check_values();">
+                    </div>
                     </form>
+                    </div>
 
                 </div><!-- /.col-xs-12 -->
             </div><!-- /.row -->
