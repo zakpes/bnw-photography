@@ -395,8 +395,14 @@ footer {
 	padding: 8px 50px;
 }
 
+.success {
+	color: #fff;
+	text-align: right;
+	margin-bottom: 50px;
+}
 
-/* --- CONTACT --- */
+
+/* --- ABOUT --- */
 
 .about-section {
 	margin-bottom: 100px;
@@ -411,6 +417,7 @@ footer {
 	font-size: 14px;
 	text-align: right;
 }
+
 
 /* --- CAROUSEL FADE ANIMATION --- */
 
@@ -570,6 +577,15 @@ footer {
 		font-size: 20px;
 		padding: 8px 60px;
 	}
+
+	.success {
+		font-size: 16px;
+	}
+
+	.success h4 {
+		font-size: 20px;
+	}
+
 }
 
 /* Small Devices, Tablets */
@@ -667,7 +683,8 @@ footer {
 		margin-bottom: 30px;
 	}
 
-	.btn-send {
+	.btn-send,
+	.success {
 		margin-bottom: 100px;
 	}
 }
@@ -701,6 +718,14 @@ footer {
 	.btn-lg {
 		font-size: 22px;
 		padding: 8px 70px;
+	}
+
+	.success {
+		font-size: 18px;
+	}
+
+	.success h4 {
+		font-size: 22px;
 	}
 }
 
