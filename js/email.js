@@ -10,10 +10,10 @@ function createRequestObject() {
 	try {
 	var xmlhttp = null;if (window.XMLHttpRequest) { xmlhttp = new XMLHttpRequest();}else{  if (window.ActiveXObject) {     xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');  } }
 
-// xmlhttp=new ActiveXObject("Msxml2.XMLHTTP"); 
+// xmlhttp=new ActiveXObject("Msxml2.XMLHTTP");
 	}
   catch(e) {
-    try { 
+    try {
     var xmlhttp = null;if (window.XMLHttpRequest) { xmlhttp = new XMLHttpRequest();}else{  if (window.ActiveXObject) {     xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');  } }
     	//xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
     }
@@ -27,7 +27,7 @@ function createRequestObject() {
 
 
 function sendRequest() {
-	
+
 	var rnd = Math.random();
 	var name = escape(document.getElementById("name").value);
 	var email = escape(document.getElementById("email").value);
@@ -43,12 +43,12 @@ function sendRequest() {
 	catch(e){}
 	finally{
 	jQuery('#contactform').slideUp("slow").hide();
-	jQuery('#contactWrapper').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+name+'</strong>! Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
+	jQuery('#contactWrapper').append('<div class="success"><h4>Email Successfully Sent!</h4><br><p>Thank you for using our contact form <strong>'+name+'</strong>!<br>Your email was successfully sent and we&#39;ll be in touch with you soon.</p></div>');
 	}
 }
 
 function sendRequest_popup() {
-	
+
 	var rnd = Math.random();
 	var name = escape(document.getElementById("name_popup").value);
 	var email = escape(document.getElementById("email_popup").value);
@@ -70,7 +70,7 @@ function sendRequest_popup() {
 
 
 function sendRequest_news() {
-	
+
 	var rnd = Math.random();
 	var name = escape(document.getElementById("name_news").value);
 	var email = escape(document.getElementById("email_news").value);
@@ -88,7 +88,7 @@ function sendRequest_news() {
 	finally{
 	jQuery('#newsletterform').slideUp("slow").hide();
 	jQuery('.intro-form-wrap').append('<div class="success"><h4>Subscription Successfully Sent!</h4><br><p>Thank you for using our newsletter, <strong>'+name+'</strong>! Your email has been registered.</p></div>');
-	
+
 	}
 }
 
@@ -115,14 +115,14 @@ function check_values() {
 	//Form
 	var valid = '';
 
-	
+
 	var $j = jQuery.noConflict();
-	
+
 	var name = '';
 	var email = '';
 	var subject = '';
 	var body = '';
-	
+
 	if(typeof $j('#contactform #name').val() != "undefined" )
 	{
 	 name = document.getElementById("name").value;
@@ -140,7 +140,7 @@ function check_values() {
 	 body = document.getElementById("body").value;
 	}
 
-	
+
 	var errors=0;
      if($j('#contactform #name').val()!=undefined)
 	 if($j('#contactform #name').val()=='') {
@@ -153,45 +153,45 @@ function check_values() {
 		}
 		else
 		$j('#contactform #name').parent().find(".error").remove();
-		
+
 		if($j('#contactform #email').val()!=undefined)
 		if(validate_email($j('#contactform #email').val())==false ) {
 		var hasClass=$j('#contactform #email').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform #email').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');	
+	 	    $j('#contactform #email').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');
 			$j('#contactform #email').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform #email').parent().find(".error").remove();
-		
-		
+
+
 		if($j('#contactform #subject').val()!=undefined)
 		if($j('#contactform #subject').val()==''){
 		var hasClass=$j('#contactform #subject').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform #subject').parent().append('<label for="contactname" generated="true" class="error">You need to enter a subject!</label>');	
+	 	    $j('#contactform #subject').parent().append('<label for="contactname" generated="true" class="error">You need to enter a subject!</label>');
 			$j('#contactform #subject').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform #subject').parent().find(".error").remove();
-		
+
 		if($j('#contactform #body').val()!=undefined)
 		if($j('#contactform #body').val()==''){
 		var hasClass=$j('#contactform #body').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform #body').parent().append('<label for="contactname" generated="true" class="error">You need to enter a message!</label>');	
+	 	    $j('#contactform #body').parent().append('<label for="contactname" generated="true" class="error">You need to enter a message!</label>');
 			$j('#contactform #body').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform #body').parent().find(".error").remove();
-		
-	
+
+
 
 	if(errors==0) {
 			document.getElementById("submit").disabled=true;
@@ -204,13 +204,13 @@ function check_values_popup() {
 	//Form
 	var valid = '';
 
-	
+
 	var $j = jQuery.noConflict();
 	var name = document.getElementById("name_popup").value;
 	var email = document.getElementById("email_popup").value;
 	var subject = document.getElementById("subject_popup").value;
 	var body = document.getElementById("body_popup").value;
-	
+
 	var errors=0;
      if($j('#contactform_popup #name_popup').val()!=undefined)
 	 if($j('#contactform_popup #name_popup').val()=='') {
@@ -223,45 +223,45 @@ function check_values_popup() {
 		}
 		else
 		$j('#contactform_popup #name_popup').parent().find(".error").remove();
-		
+
 		if($j('#contactform_popup #email_popup').val()!=undefined)
 		if(validate_email($j('#contactform_popup #email_popup').val())==false ) {
 		var hasClass=$j('#contactform_popup #email_popup').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform_popup #email_popup').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');	
+	 	    $j('#contactform_popup #email_popup').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');
 			$j('#contactform_popup #email_popup').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform_popup #email_popup').parent().find(".error").remove();
-		
-		
+
+
 		if($j('#contactform_popup #subject').val()!=undefined)
 		if($j('#contactform_popup #subject_popup').val()==''){
 		var hasClass=$j('#contactform_popup #subject_popup').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform_popup #subject_popup').parent().append('<label for="contactname" generated="true" class="error">You need to enter a subject!</label>');	
+	 	    $j('#contactform_popup #subject_popup').parent().append('<label for="contactname" generated="true" class="error">You need to enter a subject!</label>');
 			$j('#contactform_popup #subject_popup').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform_popup #subject_popup').parent().find(".error").remove();
-		
+
 		if($j('#contactform_popup #body_popup').val()!=undefined)
 		if($j('#contactform_popup #body_popup').val()==''){
 		var hasClass=$j('#contactform_popup #body_popup').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#contactform_popup #body_popup').parent().append('<label for="contactname" generated="true" class="error">You need to enter a message!</label>');	
+	 	    $j('#contactform_popup #body_popup').parent().append('<label for="contactname" generated="true" class="error">You need to enter a message!</label>');
 			$j('#contactform_popup #body_popup').focus();
 			//return false;
 			errors++;
 		}
 		else
 		$j('#contactform_popup #body_popup').parent().find(".error").remove();
-		
-	
+
+
 
 	if(errors==0) {
 			document.getElementById("submit_popup").disabled=true;
@@ -274,10 +274,10 @@ function check_values_news() {
 	//Form
 	var valid = '';
 	var $j = jQuery.noConflict();
-	
+
 	var name = '';
 	var email = '';
-	
+
 	if(typeof $j('#newsletterform #name_news').val() != "undefined" )
 	{
 	 name = document.getElementById("name_news").value;
@@ -288,7 +288,7 @@ function check_values_news() {
 	}
 
 	var errors=0;
-	
+
      if($j('#newsletterform #name_news').val()!=undefined)
 	 if($j('#newsletterform #name_news').val()=='') {
 	 	var hasClass=$j('#newsletterform #name_news').parent().find(".error").hasClass("error");
@@ -300,12 +300,12 @@ function check_values_news() {
 		}
 		else
 		$j('#newsletterform #name_news').parent().find(".error").remove();
-		
+
 		if($j('#newsletterform #email_news').val()!=undefined)
 		if(validate_email($j('#newsletterform #email_news').val())==false ) {
 		var hasClass=$j('#newsletterform #email_news').parent().find(".error").hasClass("error");
 	 	if(!hasClass)
-	 	    $j('#newsletterform #email_news').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');	
+	 	    $j('#newsletterform #email_news').parent().append('<label for="contactname" generated="true" class="error">Please enter a valid email address</label>');
 			$j('#newsletterform #email_news').focus();
 			//return false;
 			errors++;
@@ -367,5 +367,3 @@ function trim(a) {
 function isEmail(a) {
    return (a.indexOf(".") > 0) && (a.indexOf("@") > 0);
 }
-
-

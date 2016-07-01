@@ -90,11 +90,11 @@
 
                     <h1 class="contact-form-title">Contact us</h1>
 
-                    <form class="contact-form" action="ja/email.js" method="post">
+                    <form class="contact-form">
                         <input id="name" class="form-control" type="text" name="name" value="" placeholder="Name">
                         <input id="email" class="form-control" type="email" name="email" value="" placeholder="Email">
                         <textarea id="body" name="body" rows="4" style="width: 100%;" placeholder="Your message"></textarea>
-                        <button class="btn btn-primary btn-lg btn-send pull-right" type="submit" name="button">SEND</button>
+                        <button id="submit" class="btn btn-primary btn-lg btn-send pull-right" type="submit" name="button" onClick="return check_values();">SEND</button>
                     </form>
 
                 </div><!-- /.col-xs-12 -->
@@ -135,6 +135,7 @@
     </script>
     <script src="js/isotope.pkgd.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/email.js"></script>
 
 </body>
 
