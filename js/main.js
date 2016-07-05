@@ -1,11 +1,5 @@
 (function ($) {
 
-    // Random images on home page carousel
-
-    var randomBg = "url(img/honfleur.jpg)";
-
-    $(".item-1").css("background-image", randomBg);
-
     // Isotope init
     var $grid = $(".grid").isotope({
 
@@ -13,6 +7,7 @@
         itemSelector: ".grid-item",
         percentPosition: true
     });
+
     // layout Isotope after each image loads
         $grid.imagesLoaded().progress( function() {
         $grid.isotope('layout');
