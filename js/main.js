@@ -13,6 +13,10 @@
         itemSelector: ".grid-item",
         percentPosition: true
     });
+    // layout Isotope after each image loads
+        $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
+    });
 
     // Img scale on :hover
     $(".grid-item").mouseenter(function () {
