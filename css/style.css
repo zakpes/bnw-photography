@@ -63,6 +63,7 @@ html, body {
 
 .navbar-brands {
 	padding: 15px;
+	margin-left: 5px;
 	float: left;
 	transition: all 0.3;
 }
@@ -116,6 +117,7 @@ html, body {
 
 .navbar-toggle {
 	margin-top: 15px;
+	margin-right: 20px;
 	border-radius: 0;
 	background-color: hsla(0, 0%, 0%, 0.7);
 }
@@ -160,11 +162,11 @@ html, body {
 }
 
 .item-1 {
-	background-image: url(../img/frog.jpg);
+	background-image: url(../img/bridge.jpg);
 }
 
 .item-2 {
-	background-image: url(../img/home-willkommen.jpg);
+	background-image: url(../img/senso-ji-temple.jpg);
 }
 
 .item-3 {
@@ -172,7 +174,7 @@ html, body {
 }
 
 .item-4 {
-	background-image: url(../img/poppy.jpg);
+	background-image: url(../img/honfleur.jpg);
 }
 
 .item-5 {
@@ -180,7 +182,7 @@ html, body {
 }
 
 .item {
-	background-position: center top;
+	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
@@ -546,6 +548,14 @@ footer {
 
 /* Extra Small Devices, Phones */
 @media screen and ( min-width : 480px ) {
+
+	.navbar-brands {
+		margin-left: 15px;
+	}
+
+	.navbar-toggle {
+		margin-right: 30px;
+	}
 
 	#section-contact-form {
 		padding-right: 50px;
