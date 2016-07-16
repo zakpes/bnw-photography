@@ -32,11 +32,15 @@
 
         $grid.isotope({filter: "." + filteredImg });
 
+        // PrettyPhoto Gallery
+        $("div." + filteredImg + " .overlay a").attr("rel", "prettyPhoto[gallery-" + filteredImg + "]");
+
     });
 
     $(".filter-all").click(function () {
 
         $grid.isotope({filter: "*"});
+        $(".overlay a").attr("rel", "prettyPhoto[gallery-all]")
     });
 
     // Filter buttons active
@@ -47,5 +51,8 @@
         $(".btn-link.active").removeClass("active");
         $this.addClass("active");
     });
+
+    // PrettyPhoto init
+    $("a[rel^='prettyPhoto']").prettyPhoto();
 
 })(jQuery);
