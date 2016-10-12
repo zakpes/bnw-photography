@@ -1,21 +1,16 @@
 (function ($) {
 
     // Isotope init
-    // var $grid = $(".grid").isotope({
-    //
-    //     // options
-    //     itemSelector: ".grid-item",
-    //     percentPosition: true
-    // });
+    var $grid = $(".grid").isotope({
+
+        // options
+        itemSelector: ".grid-item",
+        percentPosition: true
+    });
 
     // layout Isotope after each image loads
-    var $grid = $(".grid").imagesLoaded( function() {
-        $grid.isotope({
-
-            // options
-            itemSelector: ".grid-item",
-            percentPosition: true
-        });
+        $grid.imagesLoaded().progress( function() {
+        $grid.isotope('layout');
     });
 
     // Img scale on :hover
