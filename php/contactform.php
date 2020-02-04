@@ -6,7 +6,7 @@ error_reporting(0);
 
  // configuration
 
-$email_it_to = "exelzior@yahoo.com";
+$email_it_to = "83af240a42-1762fa@inbox.mailtrap.io";
 
 $error_message = "Please complete the form first";
 

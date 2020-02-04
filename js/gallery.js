@@ -65,4 +65,13 @@
     // PrettyPhoto init
     $("a[rel^='prettyPhoto']").prettyPhoto();
 
+    function monkey(x, y) {
+        let result;
+        result = x + y;
+        console.log(result);
+        
+    }
+
+    monkey(5, 8);
+
 })(jQuery);
