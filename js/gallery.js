@@ -1,16 +1,26 @@
 (function ($) {
 
     // Isotope init
-    var $grid = $(".grid").isotope({
-
-        // options
-        itemSelector: ".grid-item",
-        percentPosition: true
-    });
+    // var $grid = $(".grid").isotope({
+    //
+    //     // options
+    //     itemSelector: ".grid-item",
+    //     percentPosition: true
+    // });
 
     // layout Isotope after each image loads
-        $grid.imagesLoaded().progress( function() {
-        $grid.isotope('layout');
+    // $grid.imagesLoaded().progress( function() {
+    //     $grid.isotope();
+    // });
+
+    // layout Isotope after all images have loaded
+    var $grid = $(".grid").imagesLoaded( function() {
+        $grid.isotope({
+
+            // options
+            itemSelector: ".grid-item",
+            percentPosition: true
+        });
     });
 
     // Img scale on :hover
@@ -54,5 +64,14 @@
 
     // PrettyPhoto init
     $("a[rel^='prettyPhoto']").prettyPhoto();
+
+    function monkey(x, y) {
+        let result;
+        result = x + y;
+        console.log(result);
+        
+    }
+
+    monkey(5, 8);
 
 })(jQuery);
